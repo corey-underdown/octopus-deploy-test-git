@@ -1,24 +1,3 @@
-step "run-a-script" {
-    name = "Run a Script a"
-
-    action {
-        action_type = "Octopus.Script"
-        properties = {
-            Octopus.Action.RunOnServer = "true"
-            Octopus.Action.Script.ScriptBody = <<-EOT
-                Write-Host 'New script step'
-                
-                #TODO: Experiment with steps of your own :) 
-                
-                Write-Host '[Learn more about the types of steps available in Octopus](https://oc.to/OnboardingAddStepsLearnMore)'
-                EOT
-            Octopus.Action.Script.ScriptSource = "Inline"
-            Octopus.Action.Script.Syntax = "PowerShell"
-        }
-        worker_pool = "hosted-ubuntu"
-    }
-}
-
 step "another-run-a-script" {
     name = "Another Run a Script"
 
